@@ -1,0 +1,6 @@
+Process information:
+  PID TTY           TIME CMD
+ 1612 ttys000    0:00.10 -zsh
+ 5652 ttys000    0:00.02 sh shellscript.sh
+ 1922 ttys004    0:00.01 /bin/zsh -il
+ 3630 ttys006    0:00.02 /bin/zsh -il
