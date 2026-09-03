@@ -31,8 +31,6 @@ This time it worked. The `-a` flag stages modified files automatically so I didn
 
 I created 4 commits in main, then created a new branch called `feature-branch` and made 3 commits there.
 
-![feature branch commits and log](ss3_feature_branch.png)
-
 I used `git log --oneline` to find the commit I wanted — "Add git cheatsheet" with hash `7d9df21`.
 
 Then switched back to main and ran:
