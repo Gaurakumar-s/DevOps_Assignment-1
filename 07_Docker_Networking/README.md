@@ -78,13 +78,6 @@ curl http://localhost:8082
 **Screenshot of Task 3 Execution:**
 ![Task 3 Execution](images/task3.png)
 
-**Browser Verification for Bind Mount:**
-Before modifying the index.html file:
-![Browser Verification Before](images/browser1.png)
-
-After modifying the index.html file:
-![Browser Verification After](images/browser2.png)
-
 ---
 
 ## Task 4: Overlay Network
