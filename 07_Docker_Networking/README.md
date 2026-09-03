@@ -32,9 +32,6 @@ docker network connect db-net backend
 docker exec backend ping -c 3 database
 ```
 
-**Screenshot of Task 1 Execution:**
-![Task 1 Execution](images/task1.png)
-
 ---
 
 ## Task 2: Host Network
@@ -50,9 +47,6 @@ docker run -d --name apache-host --network host httpd:latest
 # Access the website
 curl http://localhost:80
 ```
-
-**Screenshot of Task 2 Execution:**
-![Task 2 Execution](images/task2.png)
 
 ---
 
@@ -75,9 +69,6 @@ echo "Hello students - Modified!" > bind-mount-demo/index.html
 curl http://localhost:8082
 ```
 
-**Screenshot of Task 3 Execution:**
-![Task 3 Execution](images/task3.png)
-
 ---
 
 ## Task 4: Overlay Network
@@ -87,8 +78,15 @@ An overlay network creates a distributed network among multiple Docker daemon ho
 
 **Use Cases:**
 1. **Docker Swarm & Kubernetes:** Connecting services across a cluster of nodes.
-2. **Microservices Architecture:** When backend, database, and frontend containers are distributed across multiple servers for high availability, an overlay network allows them to communicate seamlessly.
-3. **Multi-host Networking:** Establishing encrypted communication between containers deployed on different cloud providers or data centers without exposing ports to the public internet.
+2. **Microservices Architecture:** When backend, database, and frontend containers are distributed across multiple servers for high availability.
 
-**How it Works:**
-Docker uses a technology called VXLAN (Virtual Extensible LAN) to encapsulate container network traffic into normal host-to-host traffic. When a container sends a packet to another container on a different host, the Docker daemon encapsulates the packet, sends it over the physical network to the target host, and the receiving Docker daemon unpacks it and delivers it to the correct destination container.
+---
+
+## Screenshots
+
+![img](images/ss13.png)
+![img](images/ss14.png)
+![img](images/ss15.png)
+![img](images/ss16.png)
+![img](images/ss11.png)
+![img](images/ss12.png)
