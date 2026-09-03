@@ -27,9 +27,6 @@ read -p "Enter your roll no: " roll_no
 echo "My name is $name"
 echo "My roll no is $roll_no"
 
-# Creates a directory using mkdir
-mkdir -p hello
-
 # Creates a file using touch
 touch process.log
 

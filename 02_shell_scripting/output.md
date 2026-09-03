@@ -6,7 +6,7 @@
 ---
 
 ## Script Execution & Output
-Ran `shellscript.sh`, which displays system information (current date, hostname, username, disk usage, running processes), prints a message using a variable, prompts for name and roll number using `read -p`, creates directory `hello` with `mkdir`, creates file `process.log` with `touch`, and saves running processes using `>` output redirection.
+Ran `shellscript.sh`, which displays system information (current date, hostname, username, disk usage, running processes), prints a message using a variable, prompts for name and roll number using `read -p`, creates file `process.log` with `touch`, and saves running processes using `>` output redirection.
 
 ```bash
 chmod +x shellscript.sh
@@ -21,5 +21,4 @@ sh shellscript.sh
 ## Observations
 - Using variables (`variable="Hello, World!"`) allows storing and outputting string values.
 - `read -p` allows capturing user input interactively on the command line.
-- `mkdir -p` ensures the folder is created safely without throwing an error if it already exists.
 - The `>` redirection operator sends output into `process.log`, and `>>` appends the `ps` process table into it.
