@@ -1,0 +1,50 @@
++ mkdir -p cheatsheet_test
++ cd cheatsheet_test
++ pwd
+/home/claude/DevOps-Homework/04_cheatsheet/cheatsheet_test
++ ls -la
+total 8
+drwxr-xr-x 2 root root 4096 Sep  3 09:35 .
+drwxr-xr-x 3 root root 4096 Sep  3 09:35 ..
++ touch demo.txt
++ echo 'sample line 1'
++ echo 'sample line 2'
++ cp demo.txt demo_copy.txt
++ mv demo_copy.txt demo_renamed.txt
++ cat demo.txt
+sample line 1
+sample line 2
++ head -n 1 demo.txt
+sample line 1
++ grep 'line 2' demo.txt
+sample line 2
++ chmod 644 demo.txt
++ ls -l demo.txt
+-rw-r--r-- 1 root root 28 Sep  3 09:35 demo.txt
++ ps aux
++ head -n 5
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root         1  1.7  0.1  20368  4952 ?        SLl  09:34   0:00 /process_api --firecracker-init --addr 0.0.0.0:2024 --max-ws-buffer-size 32768 --block-local-connections --listen-vsock-port 2024 --log-vsock-port 5002
+root         2  0.0  0.0      0     0 ?        S    09:34   0:00 [kthreadd]
+root         3  0.0  0.0      0     0 ?        S    09:34   0:00 [pool_workqueue_release]
+root         4  0.0  0.0      0     0 ?        I<   09:34   0:00 [kworker/R-rcu_gp]
++ df -h
++ head -n 5
+Filesystem                                                                         Size  Used Avail Use% Mounted on
+tmpfs                                                                              4.0G     0  4.0G   0% /dev/shm
+/dev/vda                                                                           252G  8.6G   10G  47% /
+tmpfs                                                                              2.0G     0  2.0G   0% /sys/fs/cgroup
+tmpfs                                                                              1.0M     0  1.0M   0% /run/sandbox-telemetry
++ du -sh .
+12K	.
++ ip a
++ head -n 10
++ tar -czvf demo_archive.tar.gz demo.txt demo_renamed.txt
+demo.txt
+demo_renamed.txt
++ tar -tzvf demo_archive.tar.gz
+-rw-r--r-- root/root        28 2026-09-03 09:35 demo.txt
+-rw-r--r-- root/root        28 2026-09-03 09:35 demo_renamed.txt
++ cd ..
++ rm -rf cheatsheet_test
++ set +x

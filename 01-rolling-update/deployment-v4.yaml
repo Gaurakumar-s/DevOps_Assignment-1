@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-rolling
+  labels:
+    app: app-rolling
+    version: v4
+spec:
+  replicas: 4
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+  selector:
+    matchLabels:
+      app: app-rolling
+  template:
+    metadata:
+      labels:
+        app: app-rolling
+        version: v4
+    spec:
+      containers:
+        - name: app
+          image: nginx:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 80
+          lifecycle:
+            postStart:
+              exec:
+                command:
+                  - /bin/sh
+                  - -c
+                  - 'echo "<html><body style=\"background-color:#7e22ce;color:white;text-align:center;padding-top:50px;\"><h1>DevOps Rolling Update Demo</h1><p>VERSION: v4</p><h3>PURPLE VERSION 4!</h3></body></html>" > /usr/share/nginx/html/index.html'
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 80
+            initialDelaySeconds: 2
+            periodSeconds: 2

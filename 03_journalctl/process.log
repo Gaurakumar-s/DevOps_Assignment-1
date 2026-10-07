@@ -1,0 +1,26 @@
++ journalctl --disk-usage
+No journal files were found.
+Archived and active journals take up 0B in the file system.
++ journalctl -n 20 --no-pager
+No journal files were found.
+-- No entries --
++ journalctl -b --no-pager
++ tail -n 20
+No journal files were found.
+-- No entries --
++ systemctl status ssh --no-pager
+System has not been booted with systemd as init system (PID 1). Can't operate.
+Failed to connect to bus: Host is down
++ journalctl -u ssh --no-pager -n 20
+No journal files were found.
+-- No entries --
++ journalctl -p err --no-pager -n 20
+No journal files were found.
+-- No entries --
++ journalctl --since '1 hour ago' --no-pager -n 20
+No journal files were found.
+-- No entries --
++ journalctl -k --no-pager -n 20
+No journal files were found.
+-- No entries --
++ set +x
